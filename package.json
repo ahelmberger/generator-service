@@ -1,6 +1,6 @@
 {
   "name": "generator-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yeoman generator for REST services using express or koa",
   "license": "MIT",
   "main": "app/index.js",
