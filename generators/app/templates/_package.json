@@ -24,25 +24,25 @@
     "cors": "~2.7.1",
     "express": "~4.13.3",
     <%_ } else if (appFramework === 'koa') { _%>
-    "koa": "~1.1.1",
+    "koa": "~1.2.0",
     "koa-cors": "~0.0.16",
     "koa-route": "~2.4.2",
     <%_ } _%>
-    "http-graceful-shutdown": "~1.0.4"
+    "http-graceful-shutdown": "~1.0.6"
   },
   "devDependencies": {
     <%_ if (testFramework === 'jasmine') { _%>
     "jasmine-node": "~1.14.5",
     <%_ } else if (/^mocha/.test(testFramework)) { _%>
-    "mocha": "~2.3.3",
+    "mocha": "~2.4.5",
     <%_ if (testFramework === 'mocha/expect') { _%>
     "expect.js": "~0.3.1",
     <%_ } else if (testFramework === 'mocha/should') { _%>
-    "should": "~7.1.1",
+    "should": "~8.3.1",
     <%_ } else if (testFramework === 'mocha/chai') { _%>
-    "chai": "~3.4.0",
+    "chai": "~3.5.0",
     <%_ } _%>
     <%_ } _%>
-    "nodemon": "~1.7.3"
+    "nodemon": "~1.9.2"
   }
 }
