@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:4.2.1
+FROM mhart/alpine-node:4.4.4
 MAINTAINER <%= author %> (<%= repositoryUrl %>)
 
 RUN mkdir -p /usr/src/app

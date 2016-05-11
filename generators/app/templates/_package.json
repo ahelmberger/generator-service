@@ -11,38 +11,38 @@
   },
   "scripts": {
     "start": "node index.js",
-    <% if (testFramework === 'jasmine') { %>
+    <%_ if (testFramework === 'jasmine') { _%>
     "test": "jasmine-node .",
-    <% } else if (/^mocha/.test(testFramework)) { %>
+    <%_ } else if (/^mocha/.test(testFramework)) { _%>
     "test": "mocha *.spec.js",
-    <% } %>
+    <%_ } _%>
     "build": "docker build -t <%= name %>:<%= version %> .",
     "watch": "nodemon -e js -x \"npm test & npm start\""
   },
   "dependencies": {
-    <% if (appFramework === 'express') { %>
+    <%_ if (appFramework === 'express') { _%>
     "cors": "~2.7.1",
     "express": "~4.13.3",
-    <% } else if (appFramework === 'koa') { %>
-    "koa": "~1.1.1",
+    <%_ } else if (appFramework === 'koa') { _%>
+    "koa": "~1.2.0",
     "koa-cors": "~0.0.16",
     "koa-route": "~2.4.2",
-    <% } %>
-    "http-graceful-shutdown": "~1.0.4"
+    <%_ } _%>
+    "http-graceful-shutdown": "~1.0.6"
   },
   "devDependencies": {
-    <% if (testFramework === 'jasmine') { %>
+    <%_ if (testFramework === 'jasmine') { _%>
     "jasmine-node": "~1.14.5",
-    <% } else if (/^mocha/.test(testFramework)) { %>
-    "mocha": "~2.3.3",
-    <% if (testFramework === 'mocha/expect') { %>
+    <%_ } else if (/^mocha/.test(testFramework)) { _%>
+    "mocha": "~2.4.5",
+    <%_ if (testFramework === 'mocha/expect') { _%>
     "expect.js": "~0.3.1",
-    <% } else if (testFramework === 'mocha/should') { %>
-    "should": "~7.1.1",
-    <% } else if (testFramework === 'mocha/chai') { %>
-    "chai": "~3.4.0",
-    <% } %>
-    <% } %>
-    "nodemon": "~1.7.3"
+    <%_ } else if (testFramework === 'mocha/should') { _%>
+    "should": "~8.3.1",
+    <%_ } else if (testFramework === 'mocha/chai') { _%>
+    "chai": "~3.5.0",
+    <%_ } _%>
+    <%_ } _%>
+    "nodemon": "~1.9.2"
   }
 }
